@@ -1,8 +1,0 @@
-C:/Users/Johnston/Documents/VIVADOSTUFF/Modelsim/BinaryDisplayVerilog/prescaler.v {1 {vlog -work work -stats=none C:/Users/Johnston/Documents/VIVADOSTUFF/Modelsim/BinaryDisplayVerilog/prescaler.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module prescaler
-
-Top level modules:
-	prescaler
-
-} {} {}}
