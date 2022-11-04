@@ -64,4 +64,7 @@ module binaryDisplay_tb ();
             SW = 'b1_1111_1111_1111;
         end
 
+    // TODO: Add TestBench to test the digit values (segment display)
+    
+
 endmodule : binaryDisplay_tb
