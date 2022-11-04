@@ -18,7 +18,7 @@ namespace eval ::run_do {
     # tcLib:   Testbench library
     # runTime: Time value (e.g., "10 ns")
     #          or "-all" to run until the finish keyword
-    variable tbEnt prescaler_tb
+    variable tbEnt binaryDisplay_tb
     variable tbLib work
     variable runTime -all
 

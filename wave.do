@@ -1,12 +1,20 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /prescaler_tb/clk
-add wave -noupdate /prescaler_tb/rst
-add wave -noupdate /prescaler_tb/clk_out
-add wave -noupdate /prescaler_tb/UUT/clk_context
-add wave -noupdate /prescaler_tb/UUT/clk_counter
+add wave -noupdate /binaryDisplay_tb/clk
+add wave -noupdate /binaryDisplay_tb/reset
+add wave -noupdate /binaryDisplay_tb/SW
+add wave -noupdate /binaryDisplay_tb/segmentDisplay
+add wave -noupdate /binaryDisplay_tb/an
+add wave -noupdate /binaryDisplay_tb/dp
+add wave -noupdate -expand -group Variables /binaryDisplay_tb/UUT/totalVal
+add wave -noupdate -expand -group Variables /binaryDisplay_tb/UUT/CurrentState
+add wave -noupdate -expand -group Variables /binaryDisplay_tb/UUT/NextState
+add wave -noupdate -expand -group Prescaler /binaryDisplay_tb/UUT/PRESCALER/clk
+add wave -noupdate -expand -group Prescaler /binaryDisplay_tb/UUT/PRESCALER/rst
+add wave -noupdate -expand -group Prescaler /binaryDisplay_tb/UUT/PRESCALER/clk_out
+add wave -noupdate -expand -group Prescaler /binaryDisplay_tb/UUT/PRESCALER/clk_counter
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+WaveRestoreCursors {{Cursor 1} {28369 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -22,4 +30,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits sec
 update
-WaveRestoreZoom {0 ps} {3057279750 ps}
+WaveRestoreZoom {0 ps} {78928 ps}
