@@ -91,6 +91,7 @@ module binaryDisplay(
                 STATE_RESET : begin
                     dp = 1'b0;
                     an = 4'b0000;
+                    segmentDisplay = 7'b000_0000;
                     // state transition
                     if (clk == 1)
                         NextState = STATE_BIT_0;
