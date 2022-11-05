@@ -46,7 +46,7 @@ module binaryDisplay_tb ();
     initial
         begin
             reset = 1'b1;
-            #10;
+            #30;
             reset = 1'b0;
         end
 
@@ -54,13 +54,11 @@ module binaryDisplay_tb ();
     initial
         begin
             SW = 'b0_0000_0000_1101;
-            #15;
+            #10e6;
             SW = 'b0_0000_1111_0001;
-            #5;
-            reset = 1'b1;
+            #10e6;
             SW = 'b0_0010_1111_1101;
-            #10;
-            reset = 1'b0;
+            #10e6;
             SW = 'b1_1111_1111_1111;
         end
 

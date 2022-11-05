@@ -21,10 +21,17 @@
 
 
 module prescaler(
-        input wire clk,
-        input rst,
-        output reg clk_out
+        clk,
+        rst,
+        clk_out
     );
+    // input signals
+    input wire clk;
+    input rst;
+
+    // output signals
+    output reg clk_out;
+
 
     parameter FPGA_CLK = 100e6;
     parameter LIGHT_CLK = 1e3;
@@ -33,14 +40,15 @@ module prescaler(
     integer clk_counter;
     reg temp_clk;
 
-    always @(posedge clk, negedge rst ) begin
+    always @(posedge clk, posedge rst ) begin
         if (rst == 1) begin
             temp_clk = 0;
             clk_counter = 0;
             clk_out = 0;
         end
         else begin
-            if (clk_counter == (clk_context / 2) - 1) begin
+            // rtoi is the real to integer converter
+            if (clk_counter == $rtoi((clk_context / 2) - 1)) begin
                 clk_counter = 0;
                 temp_clk = !temp_clk;
                 clk_out = temp_clk;
